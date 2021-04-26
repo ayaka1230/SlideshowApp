@@ -39,11 +39,6 @@ class ViewController: UIViewController {
         if segue.identifier == "enlarged" {
             let enlargedImageViewController:EnlargedImageViewController = segue.destination as! EnlargedImageViewController
             enlargedImageViewController.image = imageView.image
-            // 遷移先のプロパティに処理ごと渡す
-            enlargedImageViewController.updateImageHandler = { image in
-                // 引数を使って imageView の image を更新する処理
-                self.imageView.image = image
-            }
         }
     }
     
@@ -59,8 +54,6 @@ class ViewController: UIViewController {
         if self.timer != nil {
             self.pauseSlideShow()
         }
-        // 画像を初期化する
-        imageView.image = self.imageArray[0]
     }
     
     // 進むボタンをタップしたときに呼ばれるメソッド

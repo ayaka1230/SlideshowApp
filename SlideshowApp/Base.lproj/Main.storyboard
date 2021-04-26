@@ -98,7 +98,6 @@
                                 <rect key="frame" x="191.66666666666666" y="425" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="backView:" destination="Xlp-RP-WgG" eventType="touchUpInside" id="S9V-ea-QoX"/>
                                     <segue destination="n3T-NV-zc2" kind="unwind" unwindAction="unwind:" id="U1X-Nq-Tyx"/>
                                 </connections>
                             </button>

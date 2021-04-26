@@ -12,9 +12,6 @@ class EnlargedImageViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var image: UIImage!
-    
-    // 遷移元から処理を受け取るクロージャのプロパティを用意
-    var updateImageHandler: ((UIImage) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +19,6 @@ class EnlargedImageViewController: UIViewController {
         // Do any additional setup after loading the view.
         imageView.image = image
     }
-    
-    // 戻るボタンをタップしたときに呼ばれるメソッド
-    @IBAction func backView(_ sender: Any) {
-        // nilチェック
-        guard let image = imageView.image else { return }
-
-        if let handler = self.updateImageHandler {
-            // 現在表示されている画像を引数として渡された処理の実行
-            handler(image)
-        }
-    }
-    
 
     /*
     // MARK: - Navigation
